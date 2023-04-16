@@ -25,3 +25,8 @@ elif answer == "flying dolphin":
     print()
 else:
     print("Did I give u this option? No. Please learn to type")
+
+
+#It's not ready
+#Sources: https://www.youtube.com/watch?v=DLn3jOsNRVE&list=PLsCTnBEpCwH-MZja6wejVZ6sdMbghuGYd&index=6&t=3400s
+#Date: 16.04.2023
