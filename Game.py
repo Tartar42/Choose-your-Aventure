@@ -4,24 +4,64 @@
 
 
 
-#Just definitions over here. There are literally three lines that were used for "activating" this game.
-#Jump to line ...
 
-#Here I'm defining the start point event.
+#Just definitions over here. There are literally three lines that were used for "activating" this game.
+
+#There are three main functions: entry(), oldladyOption() and lyingDolphinOption()
+
+
+
+#Inside those three options there are other options. These are here:
+
+def didNotGiveUThisOptionOption():
+    print("Did I give u this option? No. Please learn how to type")
+
+def lieOption():
+    print(">Never lie to an old lady!! AAAAAAAAYYA< *she throws a melon at your head. You are dead")
+    entry()
+
+def nameOption():
+    input(">Nice to meet you", name, ", what can I do for you?<. She swings the melon in the direction of a child playing on the ground and misses their head for a few centimeters. She laughs. Type >mentor< or >bye< ").lower()
+
+def mentorAskingOption():
+    print("You: >Can you be my mentor?<")
+    print("Dolphin: >Why do you need a mentor?<")
+    print("You: >Because every hero does<")
+    print("Dolphin: >You are creating an uncomfortable atmosphere here... Why can't we just be good old friends?<")
+    input("Type >friends< or >persist<: ").lower()
+
+def friendOption():
+    print("Dolphin: >Okay, I guess we're friends now<")
+    print("... your task wasn't completed. You don't have a mentor. End of Adventure but Happy Ending? Take it as you like")
+    print("END")
+
+def persistOption():
+    print("Dolphin: >So my first advice for you is: follow the sun son. And if there's no sun, follow the windflow. Go far far away from here and you'll arrive somewhere<")
+
+def outsideVillageOption():
+    print("Well, now you're outside the village." , name + ",you jump on your horse again and we're ending this story right here. We all know what you will be doing won't we? You'll find yourself some monsters for you to do your best to gein their attention so they'll chase you and molest everyone around you. Thanks for playing this game! (It was all a joke, pls don't take it seriously) Bye!")
+
+
+
+#Here I'm defining the start point event:
 
 def entry():
-    answer = input("You arrived at a village. You jump from your Spaghettimonster-Horse Nebula and go through the big ancient gate. You decide that you need a mentor to help and teach you. Choose between and old wrinkled lady that is throwing one watermelon after the other on the passing people on the market, or choose the flying dolphin ").lower()
-    if answer == "wrinkled lady":
+    answer = input("You arrived at a village. You jump from your Spaghettimonster-Horse Nebula and go through the big ancient gate. You decide that you need a mentor to help and teach you. Choose between and old wrinkled >lady< that is throwing one watermelon after the other on those poor passing people on the market, or choose the flying >dolphin<. If you want to quit type >quit< ").lower()
+    if answer == "lady":
         oldLadyOption()
     
-    elif answer == "flying dolphin":
+    elif answer == "dolphin":
         flyingDoplhinOption()
+
+    elif answer == "quit":
+        quit()
 
     else: 
         didNotGiveUThisOptionOption()
 
 
-#there are two main paths. the oldladyOption() and the flyingDolphinOption()
+
+#Here are the two other main paths:
 
 def oldLadyOption():
     print("She is holding another melon, aiming for a man with a hiking stick, but now she's lowering her right arm when she sees that you are staring at her.")
@@ -35,8 +75,6 @@ def oldLadyOption():
         nameOption()
         flyingDoplhinOption()
 
-#question: should I put the flyingDoplhinOption() inside nameOption()? I did something similar on the upper if statement
-
     else:
         didNotGiveUThisOptionOption()
         oldLadyOption()
@@ -48,35 +86,26 @@ def flyingDoplhinOption():
     answer = input("You are now at the top. You sit next to the Dolphin. Type >mentor< or >starting point<: ").lower()
 
     if answer == "mentor":
-        print("You: >Can you be my mentor?<")
-        print("Dolphin: >Why do you need a mentor?<")
-        print("You: >Because every hero does<")
-        print("Dolphin: >You are creating an uncomfortable atmosphere here... Why can't we just be good old friends?<")
-        input("Type >friend< or >persist<: ").lower()
+        mentorAskingOption()
 
-        if answer == "":
-            print()
+        if answer == "persist":
+            persistOption()
+            mentorAskingOption()
+
+        elif answer == "friends":
+            friendOption()
+            entry()
+
+        else:
+            didNotGiveUThisOptionOption()
+            flyingDoplhinOption()
     
-    elif answer == "":
-        print()
+    elif answer == "starting point":
+        entry()
 
     else:
-        print()
-
-
-
-
-#Inside those two options there are other options. These are here.
-
-def didNotGiveUThisOptionOption():
-    print("Did I give u this option? No. Please learn how to type")
-
-def lieOption():
-    print(">Never lie to an old lady!! AAAAAAAAYYA< *she throws a melon at your head. You are dead")
-    entry()
-
-def nameOption():
-    input(">Nice to meet you", name, ", what can I do for you?<. She swings the melon in the direction of a child playing on the ground and misses their head for a few centimeters. She laughs. Type >mentor< or >bye< ").lower()
+        didNotGiveUThisOptionOption()
+        flyingDoplhinOption()
 
 
 
