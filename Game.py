@@ -21,7 +21,21 @@ def lieOption():
     entry()
 
 def nameOption():
-    input(">Nice to meet you", name, ", what can I do for you?<. She swings the melon in the direction of a child playing on the ground and misses their head for a few centimeters. She laughs. Type >mentor< or >bye< ").lower()
+    answer = input(">Nice to meet you " + name + ", what can I do for you?<. She swings the melon in the direction of a child playing on the ground and misses their head for a few centimeters. She laughs. Type >mentor< or >bye< ").lower()
+    if answer == "mentor":
+        print("")
+    
+    elif answer == "bye":
+        print("")
+        entry()
+
+    else:
+        didNotGiveUThisOptionOption()
+        nameOption()
+
+#!!! Here we are 22.04.23. What does the old Lady do if you gave her your name and choose mentor or bye? 
+
+
 
 def mentorAskingOption():
     print("You: >Can you be my mentor?<")
@@ -39,7 +53,7 @@ def persistOption():
     print("Dolphin: >So my first advice for you is: follow the sun son. And if there's no sun, follow the windflow. Go far far away from here and you'll arrive somewhere<")
 
 def outsideVillageOption():
-    print("Well, now you're outside the village." , name + ",you jump on your horse again and we're ending this story right here. We all know what you will be doing won't we? You'll find yourself some monsters for you to do your best to gein their attention so they'll chase you and molest everyone around you. Thanks for playing this game! (It was all a joke, pls don't take it seriously) Bye!")
+    print("Well, now you're outside the village. " + name + ", you jump on your horse again and we're ending this story right here. We all know what you will be doing won't we? You'll find yourself some monsters for you to do your best to gein their attention so they'll chase you and molest everyone around you. Thanks for playing this game! (It was all a joke, pls don't take it seriously) Bye!")
 
 
 
